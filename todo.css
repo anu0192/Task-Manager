@@ -10,11 +10,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 10px;
   }
   
   .container {
     width: 600px;
+    max-width: 100%;
     background: #fff;
     padding: 25px;
     border-radius: 10px;
@@ -38,6 +40,7 @@
     padding: 10px;
     border: 3px solid #ddd;
     border-radius: 5px;
+    font-size: 16px;
   }
   
   #addBtn {
@@ -78,9 +81,66 @@
     padding: 6px 10px;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 14px;
   }
   
   .deleteBtn:hover {
     background: darkred;
   }
-  
+
+  @media screen and (max-width: 600px) {
+    body {
+      padding: 5px;
+      align-items: flex-center;
+      padding-top: 20px;
+    }
+
+    .container {
+      width: 100%;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .input-area {
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 15px;
+    }
+
+    #taskInput {
+      padding: 12px;
+      font-size: 16px;
+      border: 2px solid #ddd;
+    }
+
+    #addBtn {
+      width: 100%;
+      padding: 12px;
+      font-size: 18px;
+    }
+
+    #taskList li {
+      padding: 10px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .taskText {
+      flex: 1;
+      min-width: 0;
+      word-break: break-word;
+    }
+
+    .deleteBtn {
+      padding: 8px 12px;
+      font-size: 14px;
+      min-width: 70px;
+    }
+  }
